@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "AngularJS",
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
