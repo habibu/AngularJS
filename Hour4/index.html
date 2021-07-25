@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" content="text/html">
+        <title>Hour 4 of Learning AngularJS by Practice</title>
+        <script src="js/angular.min.js"></script>
+        <link rel="stylesheet" href="css/w3.css">
+    </head>
+    <body>
+        <div ng-app="" class="w3-container w3-padding-large">
+            <p>Practice done by: Habibu Abdullahi @n 2021.07.24 DOM Directives</p>
+            <div>
+                <strong>Show text using show directive</strong><br>
+                <input type="checkbox" ng-model="showText"> Click to show hidden text
+                <div ng-show="showText">
+                    <p>This is the hidden content</p>
+                </div><br>
+                <strong>Hide text using hide Directives</strong><br>
+                <input type="checkbox" ng-model="hideText"> Hide now!
+                <div ng-hide="hideText">Click the checkbox to hide me!</div>
+            </div>
+            <div ng-init="counter=0"><br>
+                <strong>Event handling using click Directives</strong><br>
+                <button class="w3-btn w3-black" ng-click="counter=counter + 1"> Click to increase the counter</button>
+                <p>Counter: {{counter}}</p>
+            </div>
+            <div ng-init="bool=true"><br>
+                <strong>ng-if Directives</strong><br>
+                <input type="checkbox" ng-model="bool"> Click to hide the text 
+                <div ng-if="bool">
+                    <p>Testing testing</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

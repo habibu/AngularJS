@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS Learning by Practice</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <link rel="stylesheet" href="css/w3.css">
+        <script src="js/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" class="w3-container w3-padding-large">
+            <p>Practice done by: Habibu Abdullahi @n 2021.07.25 </p>
+            <div><br>
+                <strong>Joining two string using expression</strong><br>
+                <p>
+                    First Name: <input type="text" ng-model="firstName" placeholder="Type First Name" class="w3-input w3-border" style="width: 35%;">
+                </p>
+                <p>
+                    Surname: <input type="text" ng-model="lastName" placeholder="Type Surname" class="w3-input w3-border" style="width: 35%;">
+                </p>
+                <p>
+                    Full Name: {{firstName + " " + lastName}}
+                </p>
+            </div>
+            <div ng-init="EmployeeData={name:'Mr. A', contractDate:'July 26, 2021', salary:'500000HUF'}"><br>
+                <strong>Manupulating object using expression</strong><br>
+                <p>
+                    Employee Name: {{EmployeeData.name}}
+                </p>
+                <p>
+                    Contract Date: {{EmployeeData.contractDate}}
+                </p>
+                <p>
+                    Gross Salary: {{EmployeeData.salary}}
+                </p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

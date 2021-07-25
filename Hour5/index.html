@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS Hour 5: Learning by Practice</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <script src="js/angular.min.js"></script>
+        <link rel="stylesheet" href="css/w3.css">
+    </head>
+    <body>
+        <div ng-app="" class="w3-container w3-padding">
+            <p>Practice done by: Habibu Abdullahi @n 2021.07.25</p>
+            <div ng-init="numA=33;numB=34"><br>
+                <strong> Button Click Event</strong><br>
+                <p>
+                    A: <input type="number" ng-model="numA" class="w3-input w3-border w3-animate-input" style="width: 35%;">
+                </p>
+                <p>
+                    B: <input type="number" ng-model="numB" class="w3-input w3-border w3-animate-input" style="width: 35%;">
+                </p>
+                <button ng-click="sumAB=numA + numB" class="w3-btn w3-black">Add Numbers</button>
+                <p>Result: {{sumAB}}</p>
+            </div>
+            <div ng-init="multA=23;multB=33"><br>
+                <strong>Button Double click event</strong><br>
+                <p>
+                    A: <input type="number" ng-model="multA" class="w3-input w3-border w3-animate-input" style="width: 35%;" >
+                </p>
+                <p>
+                    B: <input type="number" ng-model="multB" class="w3-input w3-border w3-animate-input" style="width: 35%;">
+                </p>
+                <button ng-dblclick="mult=multA*multB" class="w3-btn w3-black">Double click to multiply</button>
+                <p>Result: {{mult}}</p>
+            </div>
+            <div ng-init="countNum=0"><br>
+                <strong>Mouse event(ng-mousemove, ng-mouseover, ng-mouseleave)</strong><br>
+                <textarea ng-mousemove="countNum = countNum + 1" placeholder="Play with your mouse pointer here" class="w3-input w3-animate-input w3-border" style="width: 35%;"></textarea>
+                <p>Move Mouse around the textarea to increment the number: {{countNum}}</p>
+            </div>
+            <div ng-init="countKeys=0"><br>
+                <strong>Keys Event(ng-keyup, ng-keydown)</strong><br>
+                <textarea ng-keyup="countKeys=countKeys + 1"  placeholder="Type here to count how times many times you press keyboard keys" class="w3-input w3-border w3-animate-input" style="width: 35%;"></textarea>
+                <p>Result: {{countKeys}}</p>
+            </div>
+            <div ng-init="textCopy='This is an auto copied text'; isCopy=false "><br>
+                <strong>Text copying</strong><br>
+                <p>
+                    Text to copy: <input type="text" ng-copy="isCopy=true" ng-model="textCopy" class="w3-input w3-border w3-animate-input" style="width: 35%;">
+                </p>
+                <p>
+                    Copied Text: {{textCopy}} is copied? {{isCopy}}
+                </p>
+            </div>
+            <div ng-init="textCut='This is the cutted text' ; isCut=false"><br>
+                <strong>Cuting Text</strong><br>
+                <p>
+                    Text to Cut: <input type="text" ng-cut="isCut=true" ng-model="textCut" class="w3-input w3-border w3-animate-input" style="width: 35%;">
+                </p>
+                <p>
+                    Cutted text: {{textCut}} is cutted? {{isCut}}
+                </p>
+
+            </div>
+        </div>
+    </body>
+</html>

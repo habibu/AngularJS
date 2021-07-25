@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hour 3 Learning AngularJS by Practice</title>
+        <script src="js/angular.min.js"></script>
+        <link rel="stylesheet" href="css/w3.css">
+        <meta http-equiv="content-type" content="text/html" chartset="utf-8">
+    </head>
+    <body>
+        <div ng-app="" class="w3-container w3-padding">
+            <strong>AngularJS Filters Practice: @n 2021.07.24 by Habibu Abdullahi</strong>
+            <p>Upper Case(Caps) Filters</p>
+            <div ng-init="usernameCaps='kabir' ">
+                <p>User Name: <input type="text" ng-model="usernameCaps"></p>
+                <strong>Result: </strong><p>{{usernameCaps|uppercase}}</p>
+            </div>
+            <p>Lower Case(Small Caps) Filters</p>
+            <div ng-init="usernameSmalCaps='muhd' ">
+                <p>User Name: <input type="text" ng-model="usernameSmalCaps"></p>
+                <strong>Result: </strong><p>{{usernameSmalCaps|lowercase}}</p>
+            </div>
+            <p>OrderBy Filter</p>
+            <div ng-init="studentResult=[{name:'Habibu',marks:91},{name:'Sufi',marks:99},{name:'Akiru',marks:100}]">
+                <table class="w3-table w3-striped w3-border">
+                    <tr>
+                       <th>Student Name</th><th>Maths Result</th> 
+                    </tr>
+                    <tr ng-repeat="student in studentResult|orderBy:'-marks'">
+                        <td>
+                            {{student.name}}
+                        </td>
+                        <td>
+                            {{student.marks}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p>Currency Filter</p>
+            <div ng-init="employeeSalaries=[{name:'Admin',salary:8100},{name:'Dev',salary:7100},{name:'HR guy',salary:6000}]">
+                <table class="w3-table w3-striped w3-border">
+                    <tr>
+                        <th>Employee Name</th><th>Salary</th>
+                    </tr>
+                    <tr ng-repeat="employe in employeeSalaries">
+                        <td>{{employe.name}}</td>
+                        <td>{{employe.salary|currency}}</td>
+                    </tr>
+                </table>
+            </div>
+            <p>Array Filter aka Simple array element search</p>
+            <div ng-init="studentRecord=[
+                {name:'Andy', age:19},
+                {name:'Rose',age:18},
+                {name:'Jony',age:17},
+                {name:'Judy',age:16},
+                {name:'Tomy',age:18},
+                {name:'Lil',age:21}]">
+                <table class="w3-table w3-striped w3-border">
+                    <tr>
+                        <th>Name</th><th>Age</th>
+                    </tr>
+                    <tr ng-repeat="student in studentRecord|filter:arrayList">
+                        <td>{{student.name}}</td>
+                        <td>{{student.age}}</td>
+                    </tr>
+                </table>
+                <label>Please input of the above name or age
+                <input type="text"  ng-model="arrayList"></label>
+            
+        </div>
+        </div>
+    </body>
+</html>
